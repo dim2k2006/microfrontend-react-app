@@ -82,6 +82,13 @@
           "buildTarget": "users-list:build:production"
         }
       }
+    },
+    "prettier": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npx prettier --check 'apps/users-list/**/*.{ts,tsx}'"
+      }
     }
   }
 }

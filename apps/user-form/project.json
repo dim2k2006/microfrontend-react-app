@@ -82,6 +82,13 @@
           "buildTarget": "user-form:build:production"
         }
       }
+    },
+    "prettier": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npx prettier --check 'apps/user-form/**/*.{ts,tsx}'"
+      }
     }
   }
 }

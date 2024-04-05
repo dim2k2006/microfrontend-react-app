@@ -79,6 +79,13 @@
           "buildTarget": "shell:build:production"
         }
       }
+    },
+    "prettier": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npx prettier --check 'apps/shell/**/*.{ts,tsx}'"
+      }
     }
   }
 }
