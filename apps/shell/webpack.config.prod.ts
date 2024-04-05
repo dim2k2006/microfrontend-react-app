@@ -24,7 +24,10 @@ const prodConfig: ModuleFederationConfig = {
    *   ['app2', 'http://example.com/path/to/app2/remoteEntry.js'],
    * ]
    */
-  remotes: [['user-form', 'https://layers-user-form-remote-ten.vercel.app']],
+  remotes: [
+    ['user-form', 'https://layers-user-form-remote-ten.vercel.app'],
+    ['users-list', 'https://layers-users-list-remote.vercel.app'],
+  ],
 };
 
 // Nx plugins for webpack to build config object from Nx options and context.
