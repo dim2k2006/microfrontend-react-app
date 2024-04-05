@@ -1,0 +1,87 @@
+{
+  "name": "user-form",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/user-form/src",
+  "projectType": "application",
+  "tags": ["scope:user-form"],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/user-form",
+        "index": "apps/user-form/src/index.html",
+        "baseHref": "/",
+        "main": "apps/user-form/src/main.ts",
+        "tsConfig": "apps/user-form/tsconfig.app.json",
+        "assets": [
+          "apps/user-form/src/favicon.ico",
+          "apps/user-form/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "apps/user-form/webpack.config.ts"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/user-form/src/environments/environment.ts",
+              "with": "apps/user-form/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "apps/user-form/webpack.config.prod.ts"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "user-form:build",
+        "hmr": true,
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "user-form:build:development"
+        },
+        "production": {
+          "buildTarget": "user-form:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "user-form:build",
+        "watch": false,
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "user-form:build:development"
+        },
+        "production": {
+          "buildTarget": "user-form:build:production"
+        }
+      }
+    }
+  }
+}

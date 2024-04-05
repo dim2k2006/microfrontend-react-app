@@ -1,0 +1,9 @@
+{
+  "name": "users-repository",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/users-repository/src",
+  "projectType": "library",
+  "tags": ["scope:users-repository"],
+  "// targets": "to see all targets run: nx show project users-repository --web",
+  "targets": {}
+}

@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@microfrontend-react-app/ui/*": ["libs/ui/src/*"],
+      "@microfrontend-react-app/users-repository": [
+        "libs/users-repository/src/index.ts"
+      ],
+      "@microfrontend-react-app/users-service": [
+        "libs/users-service/src/index.ts"
+      ],
+      "@microfrontend-react-app/users-service-provider": [
+        "libs/users-service-provider/src/index.ts"
+      ],
+      "user-form/Module": ["apps/user-form/src/remote-entry.ts"],
+      "users-list/Module": ["apps/users-list/src/remote-entry.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

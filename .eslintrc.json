@@ -1,0 +1,66 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "scope:ui",
+                "onlyDependOnLibsWithTags": ["scope:ui"]
+              },
+              {
+                "sourceTag": "scope:users-repository",
+                "onlyDependOnLibsWithTags": ["scope:users-repository"]
+              },
+              {
+                "sourceTag": "scope:users-service",
+                "onlyDependOnLibsWithTags": ["scope:users-repository"]
+              },
+              {
+                "sourceTag": "scope:users-service-provider",
+                "onlyDependOnLibsWithTags": ["scope:users-service"]
+              },
+              {
+                "sourceTag": "scope:shell",
+                "onlyDependOnLibsWithTags": ["scope:user-form", "scope:users-list", "scope:ui", "scope:users-service", "scope:users-repository", "scope:users-service-provider"]
+              },
+              {
+                "sourceTag": "scope:user-form",
+                "onlyDependOnLibsWithTags": ["scope:ui", "scope:users-service", "scope:users-repository", "scope:users-service-provider"]
+              },
+              {
+                "sourceTag": "scope:users-list",
+                "onlyDependOnLibsWithTags": ["scope:ui", "scope:users-service", "scope:users-repository", "scope:users-service-provider"]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nx/typescript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nx/javascript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "env": {
+        "jest": true
+      },
+      "rules": {}
+    }
+  ]
+}

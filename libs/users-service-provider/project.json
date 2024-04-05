@@ -1,0 +1,9 @@
+{
+  "name": "users-service-provider",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/users-service-provider/src",
+  "projectType": "library",
+  "tags": ["scope:users-service-provider"],
+  "// targets": "to see all targets run: nx show project users-service-provider --web",
+  "targets": {}
+}

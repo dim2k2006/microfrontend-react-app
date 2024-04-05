@@ -1,0 +1,87 @@
+{
+  "name": "users-list",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/users-list/src",
+  "projectType": "application",
+  "tags": ["scope:users-list"],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/users-list",
+        "index": "apps/users-list/src/index.html",
+        "baseHref": "/",
+        "main": "apps/users-list/src/main.ts",
+        "tsConfig": "apps/users-list/tsconfig.app.json",
+        "assets": [
+          "apps/users-list/src/favicon.ico",
+          "apps/users-list/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "apps/users-list/webpack.config.ts"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/users-list/src/environments/environment.ts",
+              "with": "apps/users-list/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "apps/users-list/webpack.config.prod.ts"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "users-list:build",
+        "hmr": true,
+        "port": 4202
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "users-list:build:development"
+        },
+        "production": {
+          "buildTarget": "users-list:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "users-list:build",
+        "watch": false,
+        "port": 4202
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "users-list:build:development"
+        },
+        "production": {
+          "buildTarget": "users-list:build:production"
+        }
+      }
+    }
+  }
+}
