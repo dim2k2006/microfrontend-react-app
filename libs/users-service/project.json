@@ -12,9 +12,6 @@
       "options": {
         "command": "npx prettier --check 'libs/users-service/**/*.{ts,tsx}'"
       }
-    },
-    "tsCheck": {
-      "executor": "./tools/executors/tsCheck:tsCheck"
     }
   }
 }
