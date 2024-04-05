@@ -12,9 +12,6 @@ develop-users-list:
 install-deps:
 	npm install
 
-test:
-	npx nx run-many --target=test --all -- --passWithNoTests
-
 lint:
 	npx nx run-many --target=lint --all
 
@@ -23,5 +20,8 @@ prettier:
 
 ts-check:
 	npx nx run-many --target=tsCheck --all
+
+test:
+	npx nx run-many --target=test --all -- --passWithNoTests
 
 .PHONY: test
