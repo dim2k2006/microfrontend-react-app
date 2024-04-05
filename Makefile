@@ -3,11 +3,20 @@ install: install-deps
 develop-shell:
 	npx nx run shell:serve
 
+build-shell:
+  npx nx run shell:build
+
 develop-user-form:
 	npx nx run user-form:serve
 
+build-user-form:
+  npx nx run user-form:build
+
 develop-users-list:
 	npx nx run users-list:serve
+
+build-users-list:
+  npx nx run users-list:build
 
 install-deps:
 	npm install
