@@ -89,6 +89,9 @@
       "options": {
         "command": "npx prettier --check 'apps/users-list/**/*.{ts,tsx}'"
       }
+    },
+    "tsCheck": {
+      "executor": "./tools/executors/tsCheck:tsCheck"
     }
   }
 }
