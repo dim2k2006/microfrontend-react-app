@@ -87,3 +87,11 @@ To run prettier check, use the following command:
 To run tests, use the following command:
 
 - `make test`
+
+## Application overview
+
+The project consists of three applications:
+
+- **Shell application**: the main application that contains the menu and the main area where the microfrontends are rendered.
+
+<img src="./docs/images/screen-shell.png" alt="Shell application" />
