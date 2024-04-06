@@ -164,3 +164,5 @@ As an example of further improvements, I would like to mention the following:
 I believe it should be possible to build the project without build tooling, but it can bring an additional burden of managing the dependencies between the applications and libraries and will also require additional time to properly maintain the project which means that less time will be spent on delivering real value to the end users.
 
 #### Can we use ESM?
+
+Yes, we can use ESM and dynamic import to load the remote applications. This was my initial approach to the problem, but I could not achieve the proper bundle configuration with webpack to make it work.
