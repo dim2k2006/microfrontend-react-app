@@ -95,3 +95,12 @@ The project consists of three applications:
 - **Shell application**: the main application that contains the menu and the main area where the microfrontends are rendered.
 
 <img src="./docs/images/screen-shell.png" alt="Shell application" />
+
+- **User Form application**: the first microfrontend that contains a form to add a new user.
+
+<img src="./docs/images/screen-user-form.png" alt="User Form application" />
+
+- **Users List application**: the second microfrontend that contains a list of created users.
+
+<img src="./docs/images/screen-users-list.png" alt="Users List application" />
+
