@@ -10,6 +10,7 @@
 - [Application overview](#application-overview)
 - [Technologies](#technologies)
 - [Further improvements](#further-improvements)
+- [FAQ](#faq)
 
 ## Task
 
@@ -155,3 +156,11 @@ As an example of further improvements, I would like to mention the following:
 - i18n support
 - error monitoring (e.g. Sentry)
 - adding some basic tests
+
+## FAQ
+
+#### What if we completely forego build tooling?
+
+I believe it should be possible to build the project without build tooling, but it can bring an additional burden of managing the dependencies between the applications and libraries and will also require additional time to properly maintain the project which means that less time will be spent on delivering real value to the end users.
+
+#### Can we use ESM?
