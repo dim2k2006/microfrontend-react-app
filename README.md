@@ -37,7 +37,7 @@ Things to take into account:
 
 ## Installation and usage
 
-The project requires Node.js version 18 or higher. To install the project, follow these steps:
+The project requires Node.js version 18.18.0 or higher. To install the project, follow these steps:
 
 - `git clone git@github.com:dim2k2006/microfrontend-react-app.git`
 - `cd microfrontend-react-app`
