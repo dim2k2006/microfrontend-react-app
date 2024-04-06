@@ -119,11 +119,11 @@ Link to the users list (remote) application: https://layers-users-list-remote.ve
 
 ## Technologies
 
-### Clean architecture
-
 The project is built on two pillars: architecture and technology.
 
-The application is built using simple yet very powerful principles from the world of clean architecture (Clean Architecture: A Craftsman's Guide to Software Structure and Design by Robert Martin https://www.amazon.se/-/en/Martin-Robert/dp/0134494164).
+### Clean architecture
+
+The project leverages simple yet very powerful principles from the world of clean architecture (Clean Architecture: A Craftsman's Guide to Software Structure and Design by Robert Martin https://www.amazon.se/-/en/Martin-Robert/dp/0134494164).
 
 According to these architectural principles, all implementation details are hidden behind the abstract interfaces and can be replaced at any time.
 
