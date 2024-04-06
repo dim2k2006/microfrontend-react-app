@@ -166,3 +166,31 @@ I believe it should be possible to build the project without build tooling, but 
 #### Can we use ESM?
 
 Yes, we can use ESM and dynamic import to load the remote applications. This was my initial approach to the problem, but I could not achieve the proper bundle configuration with webpack to make it work.
+
+#### Can we isolate the CSS of the different MFEs somehow?
+
+Yes, we can isolate the CSS of the different MFEs by using CSS modules or CSS-in-JS libraries like styled-components or emotion.
+
+#### Are there clever ways to test the shell itself?
+
+Yes, we will first need to mock the remote applications and then can apply e2e or component testing to test the functionality that relates only to the shell application.
+
+#### What can we do to test the MFE themselves?
+
+With the MFE applications it is even easier. We can leverage component testing approach to test the functionality of the MFE applications.
+
+#### Are there up and coming options for build tooling that we can consider?
+
+There are a lot of up and coming options for build tooling that we can consider. For example, `single-spa`, `Vite`, or bare `Webpack Module Federation`.
+
+#### Is a view library (e.g. React) really necessary?
+
+No, a view library is not necessary. We can use vanilla JavaScript to build the applications, but it will require more time to implement the same functionality that we can achieve with React in a very efficient way.
+
+#### Could be Web components be applied?
+
+Probably yes, but it might require more time to implement the same functionality.
+
+#### How to prevent CSS from leaking from one MFE to another?
+
+We can prevent CSS from leaking from one MFE to another by using CSS modules or CSS-in-JS libraries like styled-components or emotion.
