@@ -118,6 +118,8 @@ Link to the users list (remote) application: https://layers-users-list-remote.ve
 
 ## Technologies
 
+### Clean architecture
+
 The project is built on two pillars: architecture and technologies.
 
 The application is built using simple yet very powerful principles from the world of clean architecture approach (Clean Architecture: A Craftsman's Guide to Software Structure and Design by Robert Martin https://www.amazon.se/-/en/Martin-Robert/dp/0134494164).
@@ -136,4 +138,15 @@ In our case we have the next structure:
 - Users List application - depends on the Users Service Provider.
 - User Form application - depends on the Users Service Provider.
 - Shell application - depends on the Users Service Provider.
+
+### Build system
+
+To effectively implement the above principles, I used very powerful build tool called NX https://github.com/nrwl/nx.
+
+With NX, we can easily create a monorepo with multiple applications and libraries. It allows us to share code between applications and libraries, and to build, test, and deploy them in a very efficient way.
+
+NX also provides use with very useful eslint rule called *enforce-module-boundaries* that allows us to define the rules for the dependencies between the applications and libraries to be able to follow the clean architecture principles.
+
+Finally, NX has out of the box tools for building microfrontends using webpack module federation plugin.
+
 
