@@ -96,7 +96,7 @@ The project consists of three applications:
 
 <img src="./docs/images/screen-shell.png" alt="Shell application" />
 
-- **User Form application**: the first microfrontend that contains a form to add a new user.
+- **User Form application**: the first microfrontend that contains a form to create a new user.
 
 <img src="./docs/images/screen-user-form.png" alt="User Form application" />
 
@@ -104,3 +104,8 @@ The project consists of three applications:
 
 <img src="./docs/images/screen-users-list.png" alt="Users List application" />
 
+The is one more screen called **Split view** that shows how two remote applications (user form and users list) can communicate in real time.
+
+<img src="./docs/images/screen-split-view.png" alt="Split view" />
+
+## Technologies
