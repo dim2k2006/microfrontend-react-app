@@ -108,4 +108,12 @@ The is one more screen called **Split view** that shows how two remote applicati
 
 <img src="./docs/images/screen-split-view.png" alt="Split view" />
 
+#### Links to the deployed applications
+
+Link to the shell (host) application: https://layers-shell-host-omega.vercel.app/
+
+Link to the user form (remote) application: https://layers-user-form-remote-ten.vercel.app/
+
+Link to the users list (remote) application: https://layers-users-list-remote.vercel.app/
+
 ## Technologies
