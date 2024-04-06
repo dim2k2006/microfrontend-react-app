@@ -105,7 +105,7 @@ The project consists of three applications:
 
 <img src="./docs/images/screen-users-list.png" alt="Users List application" />
 
-The is one more screen called **Split view** that shows how two remote applications (user form and users list) can communicate in real time.
+There is one more screen called **Split view** that shows how two remote applications (user form and users list) can communicate in real-time.
 
 <img src="./docs/images/screen-split-view.png" alt="Split view" />
 
@@ -121,19 +121,19 @@ Link to the users list (remote) application: https://layers-users-list-remote.ve
 
 ### Clean architecture
 
-The project is built on two pillars: architecture and technologies.
+The project is built on two pillars: architecture and technology.
 
-The application is built using simple yet very powerful principles from the world of clean architecture approach (Clean Architecture: A Craftsman's Guide to Software Structure and Design by Robert Martin https://www.amazon.se/-/en/Martin-Robert/dp/0134494164).
+The application is built using simple yet very powerful principles from the world of clean architecture (Clean Architecture: A Craftsman's Guide to Software Structure and Design by Robert Martin https://www.amazon.se/-/en/Martin-Robert/dp/0134494164).
 
 According to these architectural principles, all implementation details are hidden behind the abstract interfaces and can be replaced at any time.
 
 In the code, we reference only these abstract interfaces instead of concrete implementations which allows us to easily replace the implementation details without changing the core logic of the application.
 
-Business logic is pure and does not depend on any external libraries or frameworks. All low level details depend on the business logic.
+Business logic is pure and does not depend on any external libraries or frameworks. All low-level details depend on the business logic.
 
-In our case we have the next structure:
+In our case, we have the next structure:
 
-- Users Repository - does depend on anything except the abstract interface.
+- Users Repository - does not depend on anything except the abstract interface.
 - Users Service - depends on the Users Repository.
 - Users Service Provider - depends on the Users Service.
 - Users List application - depends on the Users Service Provider.
@@ -142,13 +142,13 @@ In our case we have the next structure:
 
 ### Build system
 
-To effectively implement the above principles, I used very powerful build tool called NX https://github.com/nrwl/nx.
+To effectively implement the above principles, I used a very powerful build tool called NX https://github.com/nrwl/nx.
 
 With NX, we can easily create a monorepo with multiple applications and libraries. It allows us to share code between applications and libraries, and to build, test, and deploy them in a very efficient way.
 
-NX also provides use with very useful eslint rule called *enforce-module-boundaries* that allows us to define the rules for the dependencies between the applications and libraries to be able to follow the clean architecture principles.
+NX also provides us with a very useful eslint rule called *enforce-module-boundaries* that allows us to define the rules for the dependencies between the applications and libraries to be able to follow the clean architecture principles.
 
-Finally, NX has out of the box tools for building microfrontends using webpack module federation plugin.
+Finally, NX has out-of-the-box tools for building microfrontends using webpack module federation plugin.
 
 ## Further improvements
 
@@ -165,7 +165,7 @@ I believe it should be possible to build the project without build tooling, but 
 
 #### Can we use ESM?
 
-Yes, we can use ESM and dynamic import to load the remote applications. This was my initial approach to the problem, but I could not achieve the proper bundle configuration with webpack to make it work.
+Yes, we can use ESM and dynamic import to load the remote applications. This was my initial approach to the problem, but I could not achieve the proper bundle configuration with Webpack to make it work.
 
 #### Can we isolate the CSS of the different MFEs somehow?
 
@@ -173,11 +173,11 @@ Yes, we can isolate the CSS of the different MFEs by using CSS modules or CSS-in
 
 #### Are there clever ways to test the shell itself?
 
-Yes, we will first need to mock the remote applications and then can apply e2e or component testing to test the functionality that relates only to the shell application.
+Yes, we will first need to mock the remote applications and then apply e2e or component testing to test the functionality that relates only to the shell application.
 
 #### What can we do to test the MFE themselves?
 
-With the MFE applications it is even easier. We can leverage component testing approach to test the functionality of the MFE applications.
+With the MFE applications, it is even easier. We can leverage the component testing approach to test the functionality of the MFE applications.
 
 #### Are there up and coming options for build tooling that we can consider?
 
