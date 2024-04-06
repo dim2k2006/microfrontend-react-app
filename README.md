@@ -149,4 +149,9 @@ NX also provides use with very useful eslint rule called *enforce-module-boundar
 
 Finally, NX has out of the box tools for building microfrontends using webpack module federation plugin.
 
+## Further improvements
 
+As an example of further improvements, I would like to mention the following:
+- i18n support
+- error monitoring (e.g. Sentry)
+- adding some basic tests
