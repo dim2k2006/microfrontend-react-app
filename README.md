@@ -117,3 +117,23 @@ Link to the user form (remote) application: https://layers-user-form-remote-ten.
 Link to the users list (remote) application: https://layers-users-list-remote.vercel.app/
 
 ## Technologies
+
+The project is built on two pillars: architecture and technologies.
+
+The application is built using simple yet very powerful principles from the world of clean architecture approach (Clean Architecture: A Craftsman's Guide to Software Structure and Design by Robert Martin https://www.amazon.se/-/en/Martin-Robert/dp/0134494164).
+
+According to these architectural principles, all implementation details are hidden behind the abstract interfaces and can be replaced at any time.
+
+In the code, we reference only these abstract interfaces instead of concrete implementations which allows us to easily replace the implementation details without changing the core logic of the application.
+
+Business logic is pure and does not depend on any external libraries or frameworks. All low level details depend on the business logic.
+
+In our case we have the next structure:
+
+- Users Repository - does depend on anything except the abstract interface.
+- Users Service - depends on the Users Repository.
+- Users Service Provider - depends on the Users Service.
+- Users List application - depends on the Users Service Provider.
+- User Form application - depends on the Users Service Provider.
+- Shell application - depends on the Users Service Provider.
+
