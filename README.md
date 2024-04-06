@@ -33,3 +33,43 @@ Things to take into account:
 - We encourage you to use the most bleeding edge functionality of the web platform (as long you
   tell us which browser to test in :)
 - Feel free to try approaches which would be impractical in practice, but could be interesting from a theoretical perspective.
+
+## Installation and usage
+
+The project requires Node.js version 18 or higher. To install the project, follow these steps:
+
+- `git clone git@github.com:dim2k2006/microfrontend-react-app.git`
+- `cd microfrontend-react-app`
+- `make install`
+
+To run the project, use the following command:
+
+#### Shell (host) application:
+
+To run the project, use the following command:
+
+- `make develop-shell`
+
+To build the project, use the following command:
+
+- `make build-shell`
+
+#### User Form (remote) application:
+
+To run the project, use the following command:
+
+- `make develop-user-form`
+
+To build the project, use the following command:
+
+- `make build-user-form`
+
+#### Users List (remote) application:
+
+To run the project, use the following command:
+
+- `make develop-users-list`
+
+To build the project, use the following command:
+
+- `make build-users-list`
