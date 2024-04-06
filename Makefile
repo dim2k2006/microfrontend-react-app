@@ -27,9 +27,6 @@ lint:
 prettier:
 	npx nx run-many --target=prettier --all
 
-ts-check:
-	npx nx run-many --target=tsCheck --all
-
 test:
 	npx nx run-many --target=test --all -- --passWithNoTests
 

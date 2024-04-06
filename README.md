@@ -73,3 +73,17 @@ To run the project, use the following command:
 To build the project, use the following command:
 
 - `make build-users-list`
+
+### CI commands
+
+To run linting, use the following command:
+
+- `make lint`
+
+To run prettier check, use the following command:
+
+- `make prettier`
+
+To run tests, use the following command:
+
+- `make test`
